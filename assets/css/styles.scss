@@ -2,7 +2,8 @@
 ---
 
 $background-color: #1e1e1e;
-$sidebar-background: #252525;
+$sidebar-background: #1e1e1e;
+$articles-background: #252525;
 $text-color: #e0e0e0;
 $secondary-text-color: #a0a0a0;
 $highlight-color: #4caf50;
@@ -10,7 +11,8 @@ $tag-background: #3a3a3a;
 $search-background: #333333;
 
 $dark-background-color: #121212;
-$dark-sidebar-background: #1e1e1e;
+$dark-sidebar-background: #121212;
+$dark-articles-background: #1e1e1e;
 $dark-text-color: #e0e0e0;
 
 $breakpoint-tablet: 900px;
@@ -83,9 +85,14 @@ body.dark-mode {
 
 .left-sidebar {
   background-color: $sidebar-background;
-  padding: 20px;
+  padding-left: 10rem;
+  padding-top: 20px;
 
   @media (max-width: $breakpoint-tablet) {
+    padding-left: none;
+    padding-top: none;
+    padding: 10px;
+
     nav {
       ul {
         text-align: center;
@@ -96,6 +103,10 @@ body.dark-mode {
     }
   }
   @media (max-width: $breakpoint-mobile) {
+    padding-left: none;
+    padding-top: none;
+    padding: 10px;
+
     nav {
       justify-content: center;
       ul {
@@ -122,7 +133,15 @@ body.dark-mode {
   }
 
   .profile {
+
+    @media (max-width: $breakpoint-tablet) {
     text-align: center;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      text-align: center;
+      }
+    text-align: left;
     margin-bottom: 20px;
 
     img {
@@ -349,7 +368,7 @@ article {
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: $sidebar-background;
+  background-color: $articles-background;
   border-radius: 10px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -360,7 +379,7 @@ article {
   }
 
   body.dark-mode & {
-    background-color: $dark-sidebar-background;
+    background-color: $dark-articles-background;
   }
 
   .article-content,
