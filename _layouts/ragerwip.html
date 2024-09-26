@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <div id="gradient">
+
+  <body>
+    <main>
+      {% include header.html %} {% include bio.html %}
+      {% include navbar.html%}
+      <section class="articles">
+        <section id="img-wrapper-ranger">
+
+          <img src="/assets/uploads/nativvsplash.png" alt="" />
+          <h2 class="article-title"> THIS PAGE IS UNDER CONSTRUCTION <BR>
+            CHECK BACK SOON :)
+          </h2>
+        </section>
+
+
+        {% for post in site.categories.rangers %}
+        <article class="article">
+          <a href="{{site.baseurl}}{{post.url}}" class="article-area"></a>
+          <h2 class="article-title">
+            <a href="{{site.baseurl}}{{post.url}}"> {{post.title | markdownify}} </a>
+          </h2>
+
+          <small class="date">{{post.date | date_to_string}}</small>
+          <div class="categories">
+            {% for c in post.categories %}
+            <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+              >{{c}}</a
+            >
+            {% endfor %}
+          </div>
+        </article>
+        {%endfor%}
+      </section>
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
+  </body>
+  </div>
+</html>

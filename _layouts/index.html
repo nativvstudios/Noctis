@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.title }}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/styles.css' | relative_url }}"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      {% include left-sidebar.html %}
+      <main>
+        {% for post in site.posts %}
+        <article class="post-body">
+          {% if post.img %}
+          <a href="{{site.baseurl}}{{post.url}}" class="post-img-link">
+            <img class="post-img" src="{{ post.img }}" alt="Post Image" />
+          </a>
+          {% else %}
+          <!-- if there is no image in the post markdown file header
+               than the img won't show.
+
+          -->
+          {% endif %}
+          <div class="article-content">
+            {% for c in post.categories %}
+            <span class="category">{{ c }}</span>
+            {% endfor %}
+            <a href="{{site.baseurl}}{{post.url}}">
+              <h2>{{ post.title }}</h2>
+            </a>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <div class="meta">
+              <span
+                ><i class="icon-calendar"></i> {{ post.date | date_to_string
+                }}</span
+              >
+              <span
+                ><i class="icon-clock"></i> {{ post.content | number_of_words |
+                divided_by: 200 | plus: 1 }} minute read</span
+              >
+            </div>
+            <button class="read-more">Read More</button>
+          </div>
+          <div class="full-post-content" style="display: none">
+            <h2>{{ post.title }}</h2>
+            {{ post.content }}
+            <button class="show-less">Show Less</button>
+          </div>
+        </article>
+        {% endfor %}
+      </main>
+
+      <button class="menu-toggle right" aria-label="Toggle Right Menu">
+        ☰
+      </button>
+      {% include right-sidebar.html %}
+    </div>
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/post-loader.js' | relative_url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: nativvstudios.com
+Token: b82894613abc529d6fa6fd52c682c90119cd052da3400b3cc378833ea03be471

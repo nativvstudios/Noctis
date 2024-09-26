@@ -1,0 +1,33 @@
+<section id="bio">
+  <section id="img-wrapper">
+    <a href="https://github.com/nativvstudios/nativvstudios.github.io" data-tooltip="This blog is open source!">
+      <img src="{{site.data.author.dp}}" alt="" />
+    </a>
+  </section>
+  <section id="bio-wrapper">
+    <div id="text-wrapper">{{site.data.author.description}}</div>
+    <div id="social-wrapper">
+      {% for i in site.data.author.contact %}
+      <a href="{{i.url}}" target="_blank">
+        <i class="fa-brands fa-{{i.title}} fa-lg"></i>
+      </a>
+      {%endfor%}
+      
+      {% if site.data.author.contact[3].title == "email" %}
+        <a href="{{ site.data.author.contact[3].url }}" target="_blank">
+          <i class="fa-solid fa-envelope fa-lg" style="margin-left: -8px;"></i>
+        </a>
+      {%endif%}
+      
+      {% if site.linklist != "" %}
+        <a href="/links.html">
+        <i class="fa-solid fa-link fa-lg"></i>
+        </a>
+      {% endif %}
+
+    </div>
+    <div id="text-wrapper">
+      {% include navbar.html %}
+    </div>
+  </section>
+</section>

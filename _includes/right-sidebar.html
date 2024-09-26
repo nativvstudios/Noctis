@@ -1,0 +1,38 @@
+<aside class="right-sidebar">
+  {% if page.layout == "post" %} {% include toc.html html=content
+  class=".table-of-contents" %} {% else %}
+
+  <div class="search-box">
+    <input type="text" placeholder="Search" />
+  </div>
+  <div class="archives">
+    <i class="bx bx-infinite bx-md"></i>
+    <h3>Archives</h3>
+    <ul>
+      {% assign postsByYear = site.posts | group_by_exp:"post", "post.date |
+      date: '%Y'" %} {% for year in postsByYear %}
+      <li>{{ year.name }} ({{ year.items | size }})</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="categories">
+    <i class="bx bx-hash bx-md"></i>
+    <h3>Categories</h3>
+    <ul>
+      {% for category in site.categories %}
+      <li>{{ category[0] }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="tags">
+    <i class="bx bx-purchase-tag-alt bx-md"></i>
+    <h3>Tags</h3>
+    <ul>
+      {% for tag in site.tags %}
+      <li>{{ tag[0] }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endif %}
+</aside>

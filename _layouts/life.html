@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div id="gradient">
+    {% include dayNightObj.html %}
+
+    {% include head.html %}
+  <body>
+    <main>
+      {% include header.html %}
+      {% include bio.html %}
+
+      <section class="life-items">
+        <h1 class="item-title is-centered">
+          Top Podcasts we listen to on Spotify! 
+        </h1>
+        <div class="life-items-wrapper">
+        {% for i in site.data.author.artists %}
+        <div class="test">
+          <article class="life-item">
+            <figure class="image-hover">
+                <div class="image"><img src="{{ i.dp }}" class="thumb" alt="sample55"/></div>
+                <figcaption class="header">
+                    <p class="description"> {{ i.about }}</p>
+                </figcaption><a href="{{ i.url }}"></a>
+            </figure>
+          </article>
+        </div>
+        <!-- <article class="life-item">
+          {% if i.url != "" %}
+          <a href="{{ i.url }}"> 
+            <img class="life-item-img" src="{{ i.dp }}" alt="" />
+          </a>
+          {% endif %}
+        </article> -->
+        {% endfor %}
+
+      </div>  
+      </section>
+
+
+      <section class="articles">
+        {% for post in site.categories.life %}
+          <article class="article">
+            <a href="{{site.baseurl}}{{post.url}}" class="article-area"></a>
+            <h2 class="article-title">
+              <a href="{{site.baseurl}}{{post.url}}"> {{post.title | markdownify}} </a>
+            </h2>
+            <small class="date">{{post.date | date_to_string}}</small>
+            <div class="categories">
+              {% for c in post.categories %}
+              <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+                >{{c}}</a>
+              {% endfor %}
+            </div>
+          </article>
+        {%endfor%}
+      </section>  
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
+    
+  </body>
+</div>
+</html>

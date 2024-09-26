@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div id="gradient">
+  {% include dayNightObj.html %}
+
+  {% include head.html %}
+
+  <body>
+    <main>
+      {% include header.html %}
+      {% include bio.html %}
+      <section class="items">
+        {% for item in site.portfolio %}
+        <article class="item">
+          <div id="text-wrapper">
+          <h1 class="item-title is-centered">
+            {{ item.item }} 
+          </h1>
+          <!-- <a href="#!" data-base-url="{{site.baseurl}}" class="category"></a> -->
+          <p class="item-description is-centered" style="font-style:italic;">{{ item.description }}</p>
+          <h4 class="is-centered">
+            {% if item.url != "" %}
+             <a href="{{ item.url }}"> Live URL</a>
+          </h4>
+          </div>
+          <br>
+          {% endif %}
+          <img class="item-img" src="{{ item.screenshot }}" alt="" />
+        </article>
+        {% endfor %}
+
+      </section>
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
+  </body>
+  </div>
+</html>

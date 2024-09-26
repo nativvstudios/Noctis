@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.title }}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/styles.css' | relative_url }}"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      {% include left-sidebar.html %}
+      <main>
+        <article class="post-body">
+          <a href="{{site.baseurl}}{{post.url}}" class="post-img-link">
+            <img class="post-img" src="{{ post.img }}" alt="Post Image" />
+          </a>
+          <!-- if there is no image in the post markdown file header
+               than the img won't show.
+
+          -->
+          <div class="article-content">
+            <span class="category"></span>
+            <a href="">
+              <h2></h2>
+            </a>
+
+            <p>{{ content }}</p>
+
+            <div class="meta">
+              <span><i class="icon-calendar"></i></span>
+              <span><i class="icon-clock"></i></span>
+            </div>
+            <button class="read-more">Read More</button>
+          </div>
+        </article>
+      </main>
+
+      <button class="menu-toggle right" aria-label="Toggle Right Menu">
+        ☰
+      </button>
+      {% include right-sidebar.html %}
+    </div>
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+  </body>
+</html>

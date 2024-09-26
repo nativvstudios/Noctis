@@ -1,0 +1,108 @@
+title: Nativv Studios
+markdown: kramdown
+url: "nativvstudios.github.io"
+baseurl: ""
+repository: nativvstudios/nativvstudios.github.io
+
+sitehome: "/index.html"
+
+navigation:
+  - text: Home
+    url: "/"
+  - text: Life
+    url: "/life.html"
+  - text: Tutorials
+    url: "/tutorials.html"
+  - text: Portfolio
+    url: "/portfolio.html"
+  - text: Links
+    url: "/links.html"
+
+linklist:
+  - title: Buy me a Tea ❤️
+    url: https://ko-fi.com/nativvstudios
+  - title: Twitter
+    url: "https://twitter.com/whyherro1"
+  - title: Github
+    url: "https://github.com/nativvstudios"
+  - title: Dev.to
+    url: https://dev.to/nativvstudios
+  - title: Gitlab
+    url: https://gitlab.com/whyherro1
+  # - title: facebook
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: instagram
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: linkedin
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: youtube
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: twitch
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: telegram
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: whatsapp
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: discord
+  #   url: 'https://example.com/@jekyllrb'
+  # - title: slack
+  #   url: 'https://example.com/@jekyllrb'
+  - title: Email
+    url: mailto:whyherro@nativvstudios.com
+
+portfolio:
+  - item: JekyllxBulma
+    screenshot: "assets/uploads/jekyllxbulma.png"
+    description: JekyllxBulma is a Jekyll theme built ontop of the Bulma CSS Framework
+    url: "https://nativvstudios.com/jekyllxbulma"
+  - item: Jekyll Bootstrap Theme
+    description: Jekyll theme built ontop of the Bootstrap 5 Framework
+    screenshot: "assets/uploads/jekyllboot.png"
+    url: "https://www.nativvstudios.com/bootstrap-jekyll-dark/"
+  - item: From Ether
+    description: "From Ether is a captivating story-driven 2D pixel art RPG where you discover your origins from the mythical element of creation, Ether. Guided by the Ether, you realize your destined role in this timeline: to overcome the encroaching evil. Unravel the mysteries of your existence and fulfill your purpose in a beautifully crafted world, blending compelling narrative and nostalgic visuals."
+    screenshot: "assets/uploads/FromEtherLogo.png"
+    url: ""
+
+# for atom feed
+author:
+  name: "Whyherro"
+  email: whyherro@nativvstudios.com
+
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  shortname: "nativvstudios"
+
+plugins:
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+kramdown:
+  parse_block_html: true
+
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      categories:
+      comments: true
+    posts:
+      layout: post
+      categories:
+      comments: true
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /posts/:title/
+# exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]

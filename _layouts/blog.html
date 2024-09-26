@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <div id="gradient">
+    {% include dayNightObj.html %}
+  <body>
+    <main>
+ 
+      {% include header.html %} {% include bio.html %}
+
+      <section class="articles">
+        {% for post in site.posts %}
+        <article class="article" id="article">
+
+          <h2 class="article-title">
+            <a href="{{site.baseurl}}{{post.url}}"> {{post.title | markdownify}} </a>
+          </h2>
+          <small class="date">{{post.date | date_to_string}}</small>
+          <div class="categories">
+            {% for c in post.categories %}
+            <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+              >{{c}}</a>
+            {% endfor %}
+            <a href="{{site.baseurl}}{{post.url}}" class="article-area"></a>
+          </div>
+        </article>
+        {%endfor%}
+      </section>
+      {% include footer.html %}
+      <br>
+      <br>
+    </main>
+    {% include category-modal.html%}
+  </body>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</div>
+</html>

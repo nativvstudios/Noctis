@@ -1,0 +1,32 @@
+<aside class="left-sidebar">
+  <div class="profile">
+    <img src="{{ site.data.author.dp}}" alt="Profile" />
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.data.author.description }}</p>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="{{ '/' | relative_url }}"><i class="bx bx-home"></i> Home</a>
+      </li>
+      <li>
+        <a href="{{ '/archives' | relative_url }}"
+          ><i class="bx bx-archive"></i> Archives</a
+        >
+      </li>
+      <li>
+        <a href="{{ '/search' | relative_url }}"
+          ><i class="bx bx-search-alt-2"></i> Search</a
+        >
+      </li>
+      <li>
+        <a href="{{ '/links' | relative_url }}"
+          ><i class="bx bx-link-alt"></i> Links</a
+        >
+      </li>
+      <li>
+        <div class="dark-mode-toggle"><i class="bx bx-moon"></i></div>
+      </li>
+    </ul>
+  </nav>
+</aside>

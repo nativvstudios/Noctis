@@ -1,0 +1,68 @@
+name: Nativv Studios
+dp: https://avatars.githubusercontent.com/u/26895364?v=4
+description: "
+  <p>
+    Nativv Studios is an Indie Dev Studio based out of New Brunswick, Canada! <br/>
+    We make games, websites 🤔 whatever we want really!
+  </p>
+  <br/>
+"
+email: whyherro@nativvstudios.com
+
+
+artists:
+  - name: "Ram Dass Here And Now"
+    about: "Ram Dass shares heart-centered wisdom in lectures from the past 40 years, introduced by Raghu Markus."
+    dp: 'https://i.scdn.co/image/352b7188faa2fbb5150e176822ee5702ebd800c5'
+    url: 'https://open.spotify.com/show/3Dz4DL2ZMvnNQUnDSXqSdm?si=542f9eb5013d4c60'
+  - name: 'Darknet Diaries'
+    about: 'Darknet Diaries explores true stories of the dark side of the Internet, including hacking and cyber crime.'
+    dp: 'https://i.scdn.co/image/ab67656300005f1f11874ad24c1dcac2ace8d4c9'
+    url: 'https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5?si=f122e433244646da'
+  - name: 'Lex Fridman Podcast'
+    about: "Conversations on science, technology, philosophy and the nature of intelligence, consciousness, love, and power with AI researcher Lex."
+    dp: 'https://i.scdn.co/image/ab67656300005f1f563ebb538d297875b10114b7'
+    url: 'https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL?si=e9f349d6404d49c5'
+  - name: 'Mind rolling with Raghu Markus'
+    about: "Mindrolling Podcast explores consciousness, culture, and realization with Raghu Markus."
+    dp: 'https://i.scdn.co/image/004275bd469fe5fe4c225087348bad81a035d527'
+    url: 'https://open.spotify.com/show/5T7BVMUpBAs7n3ehxTNahu?si=9ac91957d69d43bf'
+  - name: 'A Place For Humans'
+    about: 'A weekly breakdown of culture, psychedelics, spirituality, conspiracy theories and other things and stuff or whatever with Dakota Wint.'
+    dp: 'https://i.scdn.co/image/ab67656300005f1f479fcaf0d9700f973b3a7d62'
+    url: 'https://open.spotify.com/show/33yBzOyp5vPDmnZCxMO10H?si=4c9ee9cc28804322'
+  - name: 'Pilgrim Heart with Krishna Das'
+    about: "Krishna Das offers guidance on spiritual journey through personal experience, humor, and kirtan."
+    dp: 'https://i.scdn.co/image/a2e7ee3bf2f62a1533d7ee0e7542406547496534'
+    url: 'https://open.spotify.com/show/7H4opZfDyfdJvCWGEnB4a7?si=65364a1999764a81'
+
+
+linklist:
+  - title: Buy me a Tea ❤️
+    url: https://ko-fi.com/nativvstudios
+    color: rgba(248, 49, 47, 0.493)
+  - title: Twitter
+    url: 'https://twitter.com/whyherro1'
+    color: rgba(29, 161, 242, 0.493)
+  - title: Github
+    url:  'https://github.com/nativvstudios'
+    color: rgba(110, 84, 148, 0.493)
+  - title: Dev.to
+    url: https://dev.to/nativvstudios
+    color: rgba(125, 214, 230, 0.493)
+  - title: Gitlab
+    url: https://gitlab.com/whyherro1
+    color: rgba(252, 109, 38, 0.493)
+  - title: Email
+    url: mailto:whyherro@nativvstudios.com
+    color: rgba(125, 214, 230, 0.493)
+
+contact:
+  - title: twitter
+    url: 'https://twitter.com/whyherro1'
+  - title: github
+    url:  'https://github.com/nativvstudios'
+  - title: dev
+    url: https://dev.to/nativvstudios
+  - title: email
+    url: mailto:whyherro@nativvstudios.com
