@@ -1,6 +1,6 @@
 # Noctis
 
-**Noctis** is a minimalist, dark-themed Jekyll theme designed to provide a sleek and modern user experience. This theme is currently a **work in progress (WIP)** and may undergo significant changes as development continues.
+**Noctis** is a minimalist, dark-themed Jekyll theme designed to provide a sleek and modern user experience. This theme is currently a **work in progress (WIP)** and may undergo significant changes as development continues. It also includes the source of my site at https://www.nativvstudios.com because I was too lazy to make a new Jekyll project.
 
 ![Noctis Screenshot](path-to-screenshot.png)
 
