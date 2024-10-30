@@ -10,6 +10,48 @@ description: "
 email: whyherro@nativvstudios.com
 
 
+color_scheme: "Light"
+
+color_schemes:
+  - name: "Light"
+    background: "#f9f9f9"
+    sidebar_background: "#f9f9f9"
+    articles_background: "#ffffff"
+    text: "#333"
+    secondary_text: "#666"
+    highlight: "#007bff"
+    tag_background: "#e0e0e0"
+    search_background: "#f0f0f0"
+  - name: "Dark"
+    background: "#333"
+    sidebar_background: "#333"
+    articles_background: "#444"
+    text: "#f9f9f9"
+    secondary_text: "#ccc"
+    highlight: "#007bff"
+    tag_background: "#555"
+    search_background: "#666"
+  - name: "Nord"
+    background: "#2e3440"
+    sidebar_background: "#2e3440"
+    articles_background: "#3b4252"
+    text: "#d8dee9"
+    secondary_text: "#a8e1ff"
+    highlight: "#81a1c1"
+    tag_background: "#434c5e"
+    search_background: "#4c566a"
+  - name: "Panda"
+    background: "#2f343f"
+    sidebar_background: "#2f343f"
+    articles_background: "#3b4148"
+    text: "#c5c8c6"
+    secondary_text: "#8b949e"
+    highlight: "#66d9ef"
+    tag_background: "#3b4148"
+    search_background: "#2f343f"
+  
+
+
 artists:
   - name: "Ram Dass Here And Now"
     about: "Ram Dass shares heart-centered wisdom in lectures from the past 40 years, introduced by Raghu Markus."
