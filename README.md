@@ -1,15 +1,17 @@
 # Noctis
 
 **Noctis** is a minimalist, dark-themed Jekyll theme designed to provide a sleek and modern user experience. This theme is currently a **work in progress (WIP)** and may undergo significant changes as development continues. It also includes the source of my site at https://www.nativvstudios.com because I was too lazy to make a new Jekyll project.
+Inspired by [Stack by JimmyCai](https://github.com/CaiJimmy/hugo-theme-stack)
+![Noctis Desktop](desktop.png)
+![Noctis Mobile](mobile.png)
 
-![Noctis Screenshot](path-to-screenshot.png)
+## Features
 
-## Features (Coming Soon)
 - Dark minimalist aesthetic
 - Responsive design for mobile and desktop
-- Customizable archive, search, and link sections
 - Tags and categories support
-- Optional light/dark mode toggle
+- light/dark mode toggle
+- Color schemes
 
 ## Installation
 
@@ -25,4 +27,4 @@ Since this theme is a WIP, contributions are welcome! Please open an issue or su
 
 ## License
 
-This project will be released under the MIT License upon completion. 
+This project will be released under the MIT License upon completion.
