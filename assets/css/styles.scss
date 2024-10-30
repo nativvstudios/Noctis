@@ -6,14 +6,22 @@
 
 {% for scheme in color_schemes %}
   {% if scheme.name == color_scheme %}
-    $background-color: {{ scheme.background }};
-    $sidebar-background: {{ scheme.sidebar_background }};
-    $articles-background: {{ scheme.articles_background }};
-    $text-color: {{ scheme.text }};
-    $secondary-text-color: {{ scheme.secondary_text }};
-    $highlight-color: {{ scheme.highlight }};
-    $tag-background: {{ scheme.tag_background }};
-    $search-background: {{ scheme.search_background }};
+  $background-color: {{ scheme.background }};
+  $sidebar-background: {{ scheme.sidebar_background }};
+  $articles-background: {{ scheme.articles_background }};
+  $text-color: {{ scheme.text }};
+  $secondary-text-color: {{ scheme.secondary_text }};
+  $highlight-color: {{ scheme.highlight }};
+  $tag-background: {{ scheme.tag_background }};
+  $search-background: {{ scheme.search_background }};
+  $dark-background-color: {{ scheme.dark_background }};
+  $dark-sidebar-background: {{ scheme.dark_sidebar_background }};
+  $dark-articles-background: {{ scheme.dark_articles_background }};
+  $dark-text-color: {{ scheme.dark_text }};
+  $dark-secondary-text-color: {{ scheme.dark_secondary_text }};
+  $dark-highlight-color: {{ scheme.dark_highlight }};
+  $dark-tag-background: {{ scheme.dark_tag_background }};
+  $dark-search-background: {{ scheme.dark_search_background }};
   {% endif %}
 {% endfor %}
 
@@ -26,10 +34,10 @@
 // $tag-background: #3a3a3a;
 // $search-background: #333333;
 
-$dark-background-color: #121212;
-$dark-sidebar-background: #121212;
-$dark-articles-background: #1e1e1e;
-$dark-text-color: #e0e0e0;
+// $dark-background-color: #121212;
+// $dark-sidebar-background: #121212;
+// $dark-articles-background: #1e1e1e;
+// $dark-text-color: #e0e0e0;
 
 $breakpoint-tablet: 900px;
 $breakpoint-mobile: 480px;
