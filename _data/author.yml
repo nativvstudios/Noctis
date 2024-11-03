@@ -10,7 +10,7 @@ description: "
 email: whyherro@nativvstudios.com
 
 
-color_scheme: "Nord"
+color_scheme: "Original"
 
 color_schemes:
   - name: "Light"
@@ -30,6 +30,7 @@ color_schemes:
     dark_highlight: "#007bff"
     dark_tag_background: "#555"
     dark_search_background: "#666"
+
   - name: "Dark"
     background: "#333"
     sidebar_background: "#333"
@@ -47,6 +48,7 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#3b4148"
     dark_search_background: "#2f343f"
+
   - name: "Nord"
     background: "#2e3440"
     sidebar_background: "#2e3440"
@@ -54,7 +56,7 @@ color_schemes:
     text: "#d8dee9"
     secondary_text: "#a8e1ff"
     highlight: "#81a1c1"
-    tag_background: "#434c5e"
+    tag_background: "#81a1c1"
     search_background: "#4c566a"
     dark_background: "#1a1d23"
     dark_sidebar_background: "#1a1d23"
@@ -64,23 +66,37 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
-  - name: "Panda"
-    background: "#2f343f"
-    sidebar_background: "#2f343f"
-    articles_background: "#3b4148"
-    text: "#c5c8c6"
-    secondary_text: "#8b949e"
-    highlight: "#66d9ef"
-    tag_background: "#3b4148"
-    search_background: "#2f343f"
-    dark_background: "#1a1d23"
-    dark_sidebar_background: "#1a1d23"
-    dark_articles_background: "#23272a"
-    dark_text: "#c5c8c6"
+
+  - name: "Original"
+    background: "#1e1e1e"
+    sidebar_background: "#1e1e1e"
+    articles_background: "#252525"
+    text: "#e0e0e0"
+    secondary_text: "#a0a0a0"
+    highlight: "#4caf50"
+    tag_background: "#3a3a3a"
+    search_background: "#3333"
+    dark_background: "#121212"
+    dark_sidebar_background: "#121212"
+    dark_articles_background: "#1e1e1e"
+    dark_text: "#e0e0e0"
     dark_secondary_text: "#8b949e"
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
+
+    # background-color: #1e1e1e;
+    # sidebar-background: #1e1e1e;
+    # articles-background: #252525;
+    # text-color: #e0e0e0;
+    # secondary-text-color: #a0a0a0;
+    # highlight-color: #4caf50;
+    # tag-background: #3a3a3a;
+    # search-background: #3333    
+    # dark-background-color: #121212;
+    # dark-sidebar-background: #121212;
+    # dark-articles-background: #1e1e1e;
+    # dark-text-color: #e0e0e0;
   
 
 
