@@ -10,7 +10,9 @@ description: "
 email: whyherro@nativvstudios.com
 
 
-color_scheme: "Original"
+color_scheme: "Monokai"
+
+
 
 color_schemes:
   - name: "Light"
@@ -66,6 +68,42 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
+
+  - name: "Dracula"
+    background: "#282a36"
+    sidebar_background: "#282a36"
+    articles_background: "#3c3f4d"
+    text: "#f8f8f2"
+    secondary_text: "#6272a4"
+    highlight: "#bd93f9"
+    tag_background: "#bd93f9"
+    search_background: "#44475a"
+    dark_background: "#282a36"
+    dark_sidebar_background: "#282a36"
+    dark_articles_background: "#3c3f4d"
+    dark_text: "#f8f8f2"
+    dark_secondary_text: "#6272a4"
+    dark_highlight: "#ff79c6"
+    dark_tag_background: "#6272a4"
+    dark_search_background: "#44475a"
+
+  - name: "Monokai"
+    background: "#272822"
+    sidebar_background: "#272822"
+    articles_background: "#383838"
+    text: "#f8f8f2"
+    secondary_text: "#75715e"
+    highlight: "#f92672"
+    tag_background: "#f92672"
+    search_background: "#49483e"
+    dark_background: "#272822"
+    dark_sidebar_background: "#272822"
+    dark_articles_background: "#383838"
+    dark_text: "#f8f8f2"
+    dark_secondary_text: "#75715e"
+    dark_highlight: "#f92672"
+    dark_tag_background: "#f92672"
+    dark_search_background: "#49483e"
 
   - name: "Original"
     background: "#1e1e1e"
