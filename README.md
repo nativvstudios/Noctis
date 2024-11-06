@@ -15,11 +15,11 @@ Inspired by [Stack by JimmyCai](https://github.com/CaiJimmy/hugo-theme-stack)
 
 ## Installation
 
-Noctis is not yet available for public use but will be released once the development reaches a stable state. Stay tuned for updates!
-
-## Usage
-
-As Noctis is still in the early stages of development, installation and usage instructions will be added once the theme is complete. For now, feel free to check the progress and experiment with the code.
+1. Download or clone the repo `git clone https://github.com/nativvstudios/Noctis.git`
+2. Enter the folder `cd Noctis`
+3. Run `bundle install`
+4. Start Jekyll `bundle exec jekyll serve`
+5. Configure in `config.yml` and `_data/author.yml`
 
 ## Contributing
 
