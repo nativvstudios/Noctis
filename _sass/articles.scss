@@ -1,0 +1,85 @@
+article {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: $articles-background;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+
+  body.dark-mode & {
+    background-color: $dark-articles-background;
+  }
+
+  .article-content,
+  .full-post-content {
+    transition: opacity 0.3s ease-in-out;
+    padding: 15px;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 10px;
+    }
+  }
+
+  .full-post-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.expanded {
+    .article-content {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .full-post-content {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .category {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.1rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: $secondary-text-color;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 0.7rem;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}

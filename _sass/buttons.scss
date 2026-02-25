@@ -1,0 +1,38 @@
+.read-more,
+.show-less {
+  background-color: $highlight-color;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($highlight-color, $lightness: -10%);
+  }
+}
+
+.menu-toggle.right {
+  display: none;
+  background: none;
+  border: none;
+  color: $text-color;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 5px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+
+  body.dark-mode & {
+    color: $dark-text-color;
+  }
+}

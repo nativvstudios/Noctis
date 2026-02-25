@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ site.title }}</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -12,7 +12,6 @@
       rel="stylesheet"
       href="{{ '/assets/css/styles.css' | relative_url }}"
     />
-
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -22,27 +21,21 @@
     <div class="container">
       {% include left-sidebar.html %}
       <main>
-        <article class="post-body">
-          <a href="{{site.baseurl}}{{post.url}}" class="post-img-link">
-            <img class="post-img" src="{{ post.img }}" alt="Post Image" />
+        <article class="post-body single-post">
+          {% if page.img %}
+          <a href="{{ page.url | relative_url }}" class="post-img-link">
+            <img class="post-img" src="{{ page.img }}" alt="{{ page.title }}" />
           </a>
-          <!-- if there is no image in the post markdown file header
-               than the img won't show.
-
-          -->
+          {% endif %}
           <div class="article-content">
-            <span class="category"></span>
-            <a href="">
-              <h2></h2>
-            </a>
-
-            <p>{{ content }}</p>
-
+            {% for c in page.categories %}
+            <span class="category">{{ c }}</span>
+            {% endfor %}
+            <h2>{{ page.title }}</h2>
             <div class="meta">
-              <span><i class="icon-calendar"></i></span>
-              <span><i class="icon-clock"></i></span>
+              <span>{{ page.date | date: "%B %d, %Y" }}</span>
             </div>
-            <button class="read-more">Read More</button>
+            {{ content }}
           </div>
         </article>
       </main>

@@ -36,7 +36,7 @@
     <h3>Tags</h3>
     <ul>
       {% for tag in site.tags %}
-      <li>{{ tag[0] }}</li>
+      <li class="tag-item" data-tag="{{ tag[0] }}">{{ tag[0] }}</li>
       {% endfor %}
     </ul>
   </div>

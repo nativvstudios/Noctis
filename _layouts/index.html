@@ -17,7 +17,12 @@
           {% endif %}
           <div class="article-content">
             {% for c in post.categories %}
-            <span class="category">{{ c }}</span>
+            {% assign _cat_idx = 0 %}{% assign _cat_counter = 0 %}
+            {% for sc in site.categories %}
+              {% if sc[0] == c %}{% assign _cat_idx = _cat_counter | modulo: 8 %}{% endif %}
+              {% assign _cat_counter = _cat_counter | plus: 1 %}
+            {% endfor %}
+            <span class="category tag-color-{{ _cat_idx }}">{{ c }}</span>
             {% endfor %}
             <a href="{{site.baseurl}}{{post.url}}">
               <h2>{{ post.title }}</h2>

@@ -80,6 +80,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
+sass:
+  style: compressed
+  silence_deprecations:
+    - import
+
 kramdown:
   parse_block_html: true
 

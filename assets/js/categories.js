@@ -1,34 +1,36 @@
 ---
 ---
 
-//Grabs the categories from the data file and creates a list of them
 const categories = {
   {% for category in site.categories %}
   {% capture category_name %}{{ category | first }}{% endcapture %}
-  {{ category_name }}: [
+  "{{ category_name }}": [
     {% for post in site.categories[category_name] %}
     {
       url: `{{ site.baseurl }}{{ post.url }}`,
-      date: `{{post.date | date_to_string}}`,
-      title: `{{post.title}}`
+      date: `{{ post.date | date_to_string }}`,
+      title: `{{ post.title }}`
     },
     {% endfor %}
   ],
   {% endfor %}
 };
 
-//Grabs the artists from the data file and creates a list of them
-// const artists = {
-//   {% for i in site.data.author.artists %}
-//   {{ i.name }}: {
-//     url: `{{ i.url }}`,
-//     about: `{{i.about}}`,
-//     title: `{{i.name}}`
-//   },
-//   {% endfor %}
-// };
+const tags = {
+  {% for tag in site.tags %}
+  {% capture tag_name %}{{ tag | first }}{% endcapture %}
+  "{{ tag_name }}": [
+    {% for post in site.tags[tag_name] %}
+    {
+      url: `{{ site.baseurl }}{{ post.url }}`,
+      date: `{{ post.date | date_to_string }}`,
+      title: `{{ post.title }}`
+    },
+    {% endfor %}
+  ],
+  {% endfor %}
+};
 
-//Grabs the archives (posts grouped by year) for the right sidebar
 const archives = {
   {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
   {% for year in postsByYear %}
@@ -54,34 +56,55 @@ function openModal(title, posts) {
     </a>
     `;
   });
+
+  const count = posts.length;
   document.querySelector("#category-modal-title").innerText = title;
+  document.querySelector("#category-modal-count").innerText =
+    count === 1 ? "1 post" : `${count} posts`;
   document.querySelector("#category-modal-content").innerHTML = html;
   document.querySelector("#category-modal-bg").classList.add("open");
   document.querySelector("#category-modal").classList.add("open");
 }
 
 function closeModal() {
-  document.querySelector("#category-modal-title").innerText = "";
-  document.querySelector("#category-modal-content").innerHTML = "";
   document.querySelector("#category-modal-bg").classList.remove("open");
   document.querySelector("#category-modal").classList.remove("open");
 }
 
 window.onload = function () {
-  document.querySelectorAll(".category").forEach((category) => {
-    category.addEventListener("click", function (e) {
-      const posts = categories[e.target.innerText];
-      if (posts) openModal(e.target.innerText, posts);
+  // Categories
+  document.querySelectorAll(".category").forEach((el) => {
+    el.addEventListener("click", function (e) {
+      const name = e.currentTarget.innerText.trim();
+      const posts = categories[name];
+      if (posts) openModal(name, posts);
     });
   });
 
-  document.querySelectorAll(".archive-year").forEach((yearEl) => {
-    yearEl.addEventListener("click", function (e) {
+  // Tags
+  document.querySelectorAll(".tag-item").forEach((el) => {
+    el.addEventListener("click", function (e) {
+      const name = e.currentTarget.dataset.tag;
+      const posts = tags[name];
+      if (posts) openModal(name, posts);
+    });
+  });
+
+  // Archives
+  document.querySelectorAll(".archive-year").forEach((el) => {
+    el.addEventListener("click", function (e) {
       const year = e.currentTarget.dataset.year;
       const posts = archives[year];
       if (posts) openModal(year, posts);
     });
   });
 
+  // Close on backdrop click or close button
   document.querySelector("#category-modal-bg").addEventListener("click", closeModal);
+  document.querySelector(".modal-close").addEventListener("click", closeModal);
+
+  // Close on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeModal();
+  });
 };

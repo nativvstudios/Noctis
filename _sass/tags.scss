@@ -1,0 +1,19 @@
+// Article card category badges
+// Muted Material Design ~300 palette. Each name gets a stable color via
+// Liquid: forloop.index0 | modulo: 8 → consistent across page loads.
+
+.article-content {
+  .category.tag-color-0 { background-color: #4db6ac; color: #fff; }
+  .category.tag-color-1 { background-color: #f48fb1; color: #333; }
+  .category.tag-color-2 { background-color: #fff176; color: #333; }
+  .category.tag-color-3 { background-color: #81c784; color: #333; }
+  .category.tag-color-4 { background-color: #64b5f6; color: #fff; }
+  .category.tag-color-5 { background-color: #ce93d8; color: #fff; }
+  .category.tag-color-6 { background-color: #ffb74d; color: #333; }
+  .category.tag-color-7 { background-color: #7986cb; color: #fff; }
+
+  .category[class*="tag-color-"]:hover {
+    filter: brightness(0.88);
+    transition: filter 0.15s ease;
+  }
+}

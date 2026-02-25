@@ -1,0 +1,140 @@
+.right-sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-background;
+  padding: 20px;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    transform: translateX(0);
+  }
+
+  body.dark-mode & {
+    background-color: $dark-sidebar-background;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+
+    .search-label {
+      display: block;
+      font-size: 0.85rem;
+      color: $secondary-text-color;
+      margin-bottom: 6px;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 100%;
+        padding: 12px 34px 12px 10px;
+        background-color: $search-background;
+        border: none;
+        border-radius: 5px;
+        color: $text-color;
+        box-sizing: border-box;
+
+        body.dark-mode & {
+          background-color: $dark-sidebar-background;
+          color: $dark-text-color;
+        }
+      }
+
+      i {
+        position: absolute;
+        right: 10px;
+        color: $secondary-text-color;
+        font-size: 1.1rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .archives,
+  .categories,
+  .tags {
+    h3 {
+      font-size: 1rem;
+      color: #c1c1c1;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+
+  // Stack-style vertical card list
+  .archives {
+    ul {
+      background-color: $articles-background;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+        &:last-child { border-bottom: none; }
+        &:hover { background-color: rgba(255, 255, 255, 0.05); }
+      }
+    }
+  }
+
+  // Stack-style neutral chips
+  .categories,
+  .tags {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      li {
+        background-color: $articles-background;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25), 0px 2px 6px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+
+.archive-year {
+  cursor: pointer;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .archive-count {
+    font-size: 0.8rem;
+    color: $secondary-text-color;
+  }
+}

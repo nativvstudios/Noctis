@@ -1,0 +1,115 @@
+.left-sidebar {
+  background-color: $sidebar-background;
+  padding: 20px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 10px;
+
+    nav {
+      ul {
+        text-align: center;
+        li { display: inline-block; }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 10px;
+
+    nav {
+      justify-content: center;
+      ul {
+        text-align: center;
+        li { display: inline-block; }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: $sidebar-width;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  body.dark-mode & {
+    background-color: $dark-sidebar-background;
+  }
+
+  .profile {
+    text-align: left;
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-tablet) { text-align: center; }
+    @media (max-width: $breakpoint-mobile) { text-align: center; }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $secondary-text-color;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+
+      a {
+        color: $secondary-text-color;
+        font-size: 1.2rem;
+        margin: 0 5px;
+        border-bottom: none;
+        box-shadow: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $text-color;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 0.9rem;
+
+          body.dark-mode & {
+            color: $dark-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .dark-mode-toggle {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: $secondary-text-color;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
