@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruby --version:*)",
+      "Bash(del:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec jekyll build:*)"
+    ]
+  }
+}

@@ -106,8 +106,8 @@ header {
   background: linear-gradient(to right, #eeeeee 0%, #a9abb3 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-  font-size: clamp(4rem, 5vw + 1, 6rem);
-  font-display: to-upper-case($string: "");
+  font-size: clamp(4rem, 5vw + 1rem, 6rem);
+  font-display: swap;
   font-weight: bolder;
   text-align: center;
   line-height: 100%;
@@ -121,7 +121,7 @@ header {
 
 .navbar {
   text-align: center;
-  font-size: clamp(.5rem, 5vw + 1, 1.0rem);
+  font-size: clamp(.5rem, 5vw + 1rem, 1.0rem);
   margin-bottom: .5rem;
 }
 

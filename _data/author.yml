@@ -10,7 +10,7 @@ description: "
 email: whyherro@nativvstudios.com
 
 
-color_scheme: "Monokai"
+color_scheme: "Original"
 
 
 
@@ -122,6 +122,26 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
+
+  - name: "Cyberpunk"
+    background: "#1a1a1a"
+    sidebar_background: "#1a1a1a"
+    articles_background: "#2a2a2a"
+    text: "#00ff00"
+    secondary_text: "#00cc00"
+    highlight: "#ff00ff"
+    tag_background: "#ff00ff"
+    search_background: "#333333"
+    dark_background: "#121212"
+    dark_sidebar_background: "#121212"
+    dark_articles_background: "#1e1e1e"
+    dark_text: "#00ff00"
+    dark_secondary_text: "#00cc00"
+    dark_highlight: "#ff00ff"
+    dark_tag_background: "#ff00ff"
+    dark_search_background: "#333333"
+
+
 
     # background-color: #1e1e1e;
     # sidebar-background: #1e1e1e;

@@ -3,6 +3,18 @@
     <img src="{{ site.data.author.dp}}" alt="Profile" />
     <h1>{{ site.title }}</h1>
     <p>{{ site.data.author.description }}</p>
+    <div class="social-icons">
+      {% for contact in site.data.author.contact %}
+      <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ contact.title }}">
+        {% if contact.title == "twitter" %}<i class="bx bxl-twitter"></i>
+        {% elsif contact.title == "github" %}<i class="bx bxl-github"></i>
+        {% elsif contact.title == "dev" %}<i class="bx bxl-dev-to"></i>
+        {% elsif contact.title == "email" %}<i class="bx bx-envelope"></i>
+        {% else %}<i class="bx bx-link-alt"></i>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
   </div>
   <nav>
     <ul>
@@ -10,23 +22,15 @@
         <a href="{{ '/' | relative_url }}"><i class="bx bx-home"></i> Home</a>
       </li>
       <li>
-        <a href="{{ '/archives' | relative_url }}"
-          ><i class="bx bx-archive"></i> Archives</a
-        >
+        <a href="{{ '/archives' | relative_url }}"><i class="bx bx-archive"></i> Archives</a>
       </li>
       <li>
-        <a href="{{ '/search' | relative_url }}"
-          ><i class="bx bx-search-alt-2"></i> Search</a
-        >
+        <a href="{{ '/search' | relative_url }}"><i class="bx bx-search-alt-2"></i> Search</a>
       </li>
       <li>
-        <a href="{{ '/links' | relative_url }}"
-          ><i class="bx bx-link-alt"></i> Links</a
-        >
-      </li>
-      <li>
-        <div class="dark-mode-toggle"><i class="bx bx-moon"></i></div>
+        <a href="{{ '/links' | relative_url }}"><i class="bx bx-link-alt"></i> Links</a>
       </li>
     </ul>
   </nav>
+  <div class="dark-mode-toggle"><i class="bx bx-moon"></i></div>
 </aside>
