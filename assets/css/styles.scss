@@ -25,6 +25,10 @@
   $dark-highlight-color: {{ scheme.dark_highlight }};
   $dark-tag-background: {{ scheme.dark_tag_background }};
   $dark-search-background: {{ scheme.dark_search_background }};
+  {% for c in scheme.category_colors %}
+  $cat-color-{{ forloop.index0 }}-bg: {{ c.bg }};
+  $cat-color-{{ forloop.index0 }}-text: {{ c.text }};
+  {% endfor %}
   {% endif %}
 {% endfor %}
 

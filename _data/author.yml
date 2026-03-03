@@ -10,7 +10,7 @@ description: "
 email: whyherro@nativvstudios.com
 
 
-color_scheme: "Original"
+color_scheme: "Cyberpunk"
 
 
 
@@ -32,6 +32,23 @@ color_schemes:
     dark_highlight: "#007bff"
     dark_tag_background: "#555"
     dark_search_background: "#666"
+    category_colors:
+      - bg: "#bbdefb"
+        text: "#1a4a7a"
+      - bg: "#f8bbd0"
+        text: "#7a1a3a"
+      - bg: "#fff9c4"
+        text: "#7a6a00"
+      - bg: "#c8e6c9"
+        text: "#1a5c1a"
+      - bg: "#e1bee7"
+        text: "#4a1a7a"
+      - bg: "#ffe0b2"
+        text: "#7a3a00"
+      - bg: "#b2ebf2"
+        text: "#006064"
+      - bg: "#dcedc8"
+        text: "#33691e"
 
   - name: "Dark"
     background: "#333"
@@ -50,6 +67,23 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#3b4148"
     dark_search_background: "#2f343f"
+    category_colors:
+      - bg: "#4fc3f7"
+        text: "#333"
+      - bg: "#f48fb1"
+        text: "#333"
+      - bg: "#fff176"
+        text: "#333"
+      - bg: "#80cbc4"
+        text: "#333"
+      - bg: "#ce93d8"
+        text: "#333"
+      - bg: "#ffb74d"
+        text: "#333"
+      - bg: "#81c784"
+        text: "#333"
+      - bg: "#7986cb"
+        text: "#fff"
 
   - name: "Nord"
     background: "#2e3440"
@@ -68,6 +102,23 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
+    category_colors:
+      - bg: "#5e81ac"
+        text: "#fff"
+      - bg: "#bf616a"
+        text: "#fff"
+      - bg: "#ebcb8b"
+        text: "#333"
+      - bg: "#a3be8c"
+        text: "#333"
+      - bg: "#88c0d0"
+        text: "#333"
+      - bg: "#b48ead"
+        text: "#fff"
+      - bg: "#d08770"
+        text: "#fff"
+      - bg: "#8fbcbb"
+        text: "#333"
 
   - name: "Dracula"
     background: "#282a36"
@@ -86,6 +137,23 @@ color_schemes:
     dark_highlight: "#ff79c6"
     dark_tag_background: "#6272a4"
     dark_search_background: "#44475a"
+    category_colors:
+      - bg: "#bd93f9"
+        text: "#282a36"
+      - bg: "#ff79c6"
+        text: "#282a36"
+      - bg: "#f1fa8c"
+        text: "#282a36"
+      - bg: "#50fa7b"
+        text: "#282a36"
+      - bg: "#8be9fd"
+        text: "#282a36"
+      - bg: "#ff5555"
+        text: "#fff"
+      - bg: "#ffb86c"
+        text: "#282a36"
+      - bg: "#6272a4"
+        text: "#fff"
 
   - name: "Monokai"
     background: "#272822"
@@ -104,6 +172,23 @@ color_schemes:
     dark_highlight: "#f92672"
     dark_tag_background: "#f92672"
     dark_search_background: "#49483e"
+    category_colors:
+      - bg: "#f92672"
+        text: "#fff"
+      - bg: "#a6e22e"
+        text: "#272822"
+      - bg: "#e6db74"
+        text: "#272822"
+      - bg: "#66d9e8"
+        text: "#272822"
+      - bg: "#ae81ff"
+        text: "#fff"
+      - bg: "#fd971f"
+        text: "#272822"
+      - bg: "#75715e"
+        text: "#fff"
+      - bg: "#f8f8f2"
+        text: "#272822"
 
   - name: "Original"
     background: "#1e1e1e"
@@ -122,6 +207,23 @@ color_schemes:
     dark_highlight: "#66d9ef"
     dark_tag_background: "#23272a"
     dark_search_background: "#1a1d23"
+    category_colors:
+      - bg: "#4caf50"
+        text: "#fff"
+      - bg: "#81c784"
+        text: "#333"
+      - bg: "#26a69a"
+        text: "#fff"
+      - bg: "#ef9a9a"
+        text: "#333"
+      - bg: "#90caf9"
+        text: "#333"
+      - bg: "#ce93d8"
+        text: "#333"
+      - bg: "#ffcc80"
+        text: "#333"
+      - bg: "#80cbc4"
+        text: "#333"
 
   - name: "Cyberpunk"
     background: "#1a1a1a"
@@ -140,6 +242,23 @@ color_schemes:
     dark_highlight: "#ff00ff"
     dark_tag_background: "#ff00ff"
     dark_search_background: "#333333"
+    category_colors:
+      - bg: "#00cc00"
+        text: "#000"
+      - bg: "#cc00cc"
+        text: "#fff"
+      - bg: "#00cccc"
+        text: "#000"
+      - bg: "#cc0000"
+        text: "#fff"
+      - bg: "#cccc00"
+        text: "#000"
+      - bg: "#cc6600"
+        text: "#000"
+      - bg: "#0066cc"
+        text: "#fff"
+      - bg: "#9900cc"
+        text: "#fff"
 
 
 
@@ -150,12 +269,12 @@ color_schemes:
     # secondary-text-color: #a0a0a0;
     # highlight-color: #4caf50;
     # tag-background: #3a3a3a;
-    # search-background: #3333    
+    # search-background: #3333
     # dark-background-color: #121212;
     # dark-sidebar-background: #121212;
     # dark-articles-background: #1e1e1e;
     # dark-text-color: #e0e0e0;
-  
+
 
 
 artists:

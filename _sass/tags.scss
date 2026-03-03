@@ -3,14 +3,14 @@
 // Liquid: forloop.index0 | modulo: 8 → consistent across page loads.
 
 .article-content {
-  .category.tag-color-0 { background-color: #4db6ac; color: #fff; }
-  .category.tag-color-1 { background-color: #f48fb1; color: #333; }
-  .category.tag-color-2 { background-color: #fff176; color: #333; }
-  .category.tag-color-3 { background-color: #81c784; color: #333; }
-  .category.tag-color-4 { background-color: #64b5f6; color: #fff; }
-  .category.tag-color-5 { background-color: #ce93d8; color: #fff; }
-  .category.tag-color-6 { background-color: #ffb74d; color: #333; }
-  .category.tag-color-7 { background-color: #7986cb; color: #fff; }
+  .category.tag-color-0 { background-color: $cat-color-0-bg; color: $cat-color-0-text; }
+  .category.tag-color-1 { background-color: $cat-color-1-bg; color: $cat-color-1-text; }
+  .category.tag-color-2 { background-color: $cat-color-2-bg; color: $cat-color-2-text; }
+  .category.tag-color-3 { background-color: $cat-color-3-bg; color: $cat-color-3-text; }
+  .category.tag-color-4 { background-color: $cat-color-4-bg; color: $cat-color-4-text; }
+  .category.tag-color-5 { background-color: $cat-color-5-bg; color: $cat-color-5-text; }
+  .category.tag-color-6 { background-color: $cat-color-6-bg; color: $cat-color-6-text; }
+  .category.tag-color-7 { background-color: $cat-color-7-bg; color: $cat-color-7-text; }
 
   .category[class*="tag-color-"]:hover {
     filter: brightness(0.88);
